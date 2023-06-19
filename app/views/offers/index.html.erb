@@ -1,0 +1,8 @@
+<% @offers.each do |offer| %>
+  <%= offer.title %>
+  <%= offer.description %>
+  <%= offer.date %>
+  <%= offer.price %>
+  <%= link_to "More info", offer_path(offer.id) %>
+<% end %>
+<%= link_to "New offer", new_offer_path(@offer) %>
