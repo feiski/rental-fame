@@ -1,0 +1,8 @@
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li><h3><%= reservation.id %></h3>
+    <p><br><%= reservation.comment %></p></li>
+  <% end %>
+</ul>
+
+<%= link_to "return to the home-pages", root_path %>
