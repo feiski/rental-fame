@@ -1,14 +1,14 @@
 <div class="offer">
-<% if @offer.photo.key.present? %>
-    <%= cl_image_tag @offer.photo.key, height: 300, width: 350, crop: :fill %>
-  <% else %>
-    <%= image_tag "star.jpg", alt: "No Star", height: 300, width: 350, crop: :fill %>
-  <% end %>
   <h1><%= @offer.title %></h1>
   <div class="offer_desc">
     <%= @offer.description %>
   </div>
-
+  <div class="image-wrap">
+  <% if @offer.photo.key.present? %>
+    <%= cl_image_tag @offer.photo.key, class: "photo" %>
+  <% else %>
+    <%= image_tag "star.jpg", alt: "No Star", class: "photo" %>
+  <% end %>
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
     <%= link_to "Delete", offer_path(@offer), class: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
@@ -25,6 +25,9 @@
     </div>
   </div>
   <% end %>
+
+  </div>
+
 </div>
 
 <ul>
