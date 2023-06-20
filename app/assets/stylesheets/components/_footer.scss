@@ -1,5 +1,5 @@
 .footer {
-  background-color: #939599;
+  background-color: rgba(147, 149, 153, 0.5);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -7,13 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d6d6d6;
+  color: #939599;
   a {
-    color: #d6d6d6;
+    color: #939599;
     text-decoration: none;
     transition: 0.1s;
     &:hover {
-      color: white;
+      color: #F66502;
     }
   }
 
