@@ -1,0 +1,12 @@
+<h1><%=reservation.id%></h1>
+
+<p><%= reservation.comment %></p>
+
+<%= form_with model: @reservation do |f| %>
+
+  <%= f.label :accepted %>
+  <%= f.text_field :accepted %>
+  <%= f.submit %>
+<% end %>
+
+
