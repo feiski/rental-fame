@@ -21,13 +21,21 @@
 .search-form {
   display: flex;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   flex-grow: 1;
+}
+.input-container {
+  position: relative;
+  width: 100%;
 }
 .search-input {
   padding: 8px;
   border: none;
+  width: 42vh;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  &:focus {
+    outline: 2px solid #f78233;
+  }
 }
 .search-input::placeholder {
   font-size: 10px;
@@ -35,11 +43,13 @@
 .fa-magnifying-glass {
   border: none;
   cursor: pointer;
-  border-radius: 50%;
-  padding: 8px;
-  background-color: rgba(147, 149, 153, 0.5);
+  background: none;
+  color: #F66502;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
   &:hover {
-    color: #F66502;
+    color: #f78233;
   }
 }
 .navbar-nav {
@@ -48,10 +58,10 @@
 .nav-item .fa-bell {
   padding: 0 0 42px 8px;
   text-decoration: none;
-  color: #939599;
+  color: #F66502;
   position: relative;
   &:hover {
-    color: #F66502;
+    color: #f78233;
   }
 }
 .notification-badge {
