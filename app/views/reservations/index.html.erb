@@ -1,12 +1,19 @@
-<ul>
+<div class="reservation">
   <% @reservations.each do |reservation| %>
-    <li><h3><%= reservation.id %></h3>
-    <p><br><%= reservation.comment %></p>
-    <%= link_to "delete this reservation",
-    reservations_path(@reservation),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %></li>
+    <h1><%= reservation.offer.title %></h1>
+    <div class="reservation">
+      <%= reservation.comment %>
+    </div>
+    <div class="reservation">
+      <%= reservation.offer.date %><span> : </span>
+      <% if reservation.accepted? %>
+      Accepted
+      <% else %>
+      Pending
+      <% end %>
+    </div>
+      <%= link_to "Delete this reservation", reservations_path(@reservation), class:"add",
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <hr class="separator">
   <% end %>
-</ul>
-
-<%= link_to "home page", root_path %>
+</div>
