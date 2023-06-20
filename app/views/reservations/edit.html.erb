@@ -1,12 +1,8 @@
-<h1><%=reservation.id%></h1>
+<h1><%= @reservation.offer.title%></h1>
 
-<p><%= reservation.comment %></p>
+<p><%= @reservation.comment %></p>
 
-<%= form_with model: @reservation do |f| %>
-
-  <%= f.label :accepted %>
-  <%= f.text_field :accepted %>
+<%= simple_form_for [@offer, @reservation]  do |f| %>
+  <%= f.input :accepted %>
   <%= f.submit %>
 <% end %>
-
-

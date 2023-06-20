@@ -26,8 +26,12 @@ class ReservationsController < ApplicationController
 
   def update
     @reservation = Reservation.find(params[:id])
-    @reservation.update(reservation_params)
-    redirect_to reservations_path
+    @reservation.accepted = true
+    if @reservation.save!
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
