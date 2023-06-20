@@ -2,7 +2,7 @@
 <% if @offer.photo.key.present? %>
     <%= cl_image_tag @offer.photo.key, height: 300, width: 350, crop: :fill %>
   <% else %>
-    <%= image_tag "star", alt: "No Star", height: 300, width: 350, crop: :fill %>
+    <%= image_tag "star.jpg", alt: "No Star", height: 300, width: 350, crop: :fill %>
   <% end %>
   <h1><%= @offer.title %></h1>
   <div class="offer_desc">
