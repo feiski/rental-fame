@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :owner, only: %i[edit update destroy]
   before_action :set_offer, only: %i[show edit update destroy]
 
@@ -50,7 +51,7 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :description, :date, :price)
+    params.require(:offer).permit(:title, :description, :date, :price, :photo)
   end
 
   def owner
