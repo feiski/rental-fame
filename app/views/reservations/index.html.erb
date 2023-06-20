@@ -1,9 +1,9 @@
 <ul>
   <% @reservations.each do |reservation| %>
-    <li><h3><%= reservation.id %></h3>
+    <li><h3><%= reservation.offer.title %></h3>
     <p><br><%= reservation.comment %></p>
     <%= link_to "delete this reservation",
-    reservations_path(@reservation),
+    reservation_path(reservation),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %></li>
   <% end %>
