@@ -3,16 +3,21 @@
   <div class="offer_desc">
     <%= @offer.description %>
   </div>
-  <div class="offer_date">
-    <%= @offer.date %>
-  </div>
-  <div class="offer_price">
-    $<%= @offer.price %>
-  </div>
+
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
     <%= link_to "Delete", offer_path(@offer), class: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   <% else %>
-    <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "reserve" %>
+  <div class="reserve-wrap">
+    <div class="reserve-card">
+      <h2>Date of this event: </h2>
+      <div class="offer_date">
+        <%= @offer.date.day %>/<%= @offer.date.month %>/<%= @offer.date.year %>
+      </div>
+      <h2>Price:</h2>
+      <div class="offer_price">$<%= @offer.price %></div>
+      <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "reserve" %>
+    </div>
+  </div>
   <% end %>
 </div>

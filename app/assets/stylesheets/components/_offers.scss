@@ -37,3 +37,14 @@
   width: fit-content;
   align-self: flex-end;
 }
+
+.offer {
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #F4F4F4;
+  h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+  }
+}

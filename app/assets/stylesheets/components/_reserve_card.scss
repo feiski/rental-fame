@@ -1,0 +1,28 @@
+.reserve-wrap {
+  display: flex;
+  justify-content: center;
+}
+.reserve-card {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+  }
+  .offer_date {
+    font-size: 1.3em;
+  }
+  .offer_price {
+    margin: 0 auto;
+    color: #134FA8;
+    font-size: 1.3em;
+    background-color: #e7e7e7;
+  }
+}
