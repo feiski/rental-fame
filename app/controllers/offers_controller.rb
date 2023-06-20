@@ -1,9 +1,13 @@
 class OffersController < ApplicationController
-  before_action :owner, only: %i[edit update]
+  before_action :owner, only: %i[edit update destroy]
   before_action :set_offer, only: %i[show edit update destroy]
 
   def index
-    @offers = Offer.all
+    if params[:show_owned]
+      @offers = current_user.offers
+    else
+      @offers = Offer.all
+    end
   end
 
   def show
@@ -53,7 +57,7 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
     return if @offer.user == current_user
 
-    flash[:warning] = 'You are not authorized to edit this offer (not the owner).'
+    flash[:warning] = 'You are not authorized to edit/delete this offer (not the owner).'
     redirect_to offers_path
   end
 end
