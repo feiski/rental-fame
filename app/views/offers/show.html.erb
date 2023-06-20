@@ -11,7 +11,7 @@
   <% end %>
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
-    <%= link_to "Delete", offer_path(@offer), class: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   <% else %>
   <div class="reserve-wrap">
     <div class="reserve-card">
@@ -21,7 +21,7 @@
       </div>
       <h2>Price:</h2>
       <div class="offer_price">$<%= @offer.price %></div>
-      <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "reserve" %>
+      <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "add" %>
     </div>
   </div>
   <% end %>
