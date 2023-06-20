@@ -3,7 +3,12 @@
   <div class="offer_desc">
     <%= @offer.description %>
   </div>
-
+  <div class="image-wrap">
+  <% if @offer.photo.key.present? %>
+    <%= cl_image_tag @offer.photo.key, class: "photo" %>
+  <% else %>
+    <%= image_tag "star.jpg", alt: "No Star", class: "photo" %>
+  <% end %>
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
     <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
@@ -20,4 +25,14 @@
     </div>
   </div>
   <% end %>
+
+  </div>
+
 </div>
+
+<ul>
+  <% @offer.reservations.each do |reservation| %>
+    <li><br><%= link_to reservation.offer.title, edit_reservation_path(reservation) %>
+    <br><%= reservation.comment %></li>
+  <% end %>
+</ul>
