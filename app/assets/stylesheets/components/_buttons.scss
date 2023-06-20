@@ -6,26 +6,26 @@ a.add, a.reserve, a.edit, a.delete {
   margin-top: 15px;
   border-radius: 5px;
   transition: 0.1s;
-  background-color: #F66502;
+  background-color: $primary;
 }
 
 a.add, a.edit {
-  background-color: #F66502;
+  background-color: $primary;
   &:hover {
-    background-color: #f78233;
+    background-color: $hover;
   }
 }
 
 a.reserve {
-  background-color: #134fa8;
+  background-color: $primary;
   &:hover {
-    background-color: #396fbf;
+    background-color: $hover;
   }
 }
 
 a.delete {
-  background-color: #d50400;
+  background-color:  $primary;
   &:hover {
-    background-color: #e73b38;
+    background-color: $hover;
   }
 }

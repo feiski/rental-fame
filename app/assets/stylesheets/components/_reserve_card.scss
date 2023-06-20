@@ -19,10 +19,9 @@
   .offer_date {
     font-size: 1.3em;
   }
-  .offer_price {
+  .reserve_price {
     margin: 0 auto;
-    color: #134FA8;
     font-size: 1.3em;
-    background-color: #e7e7e7;
+    background-color: $card-content;
   }
 }

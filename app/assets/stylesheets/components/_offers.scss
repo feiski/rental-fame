@@ -6,7 +6,7 @@
 
   a.offer {
     display: inline-block;
-    background-color: #F4F4F4;
+    background-color: $card;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -17,7 +17,7 @@
     max-width: 250px;
 
     &:hover {
-      background-color: #dfdfdf;
+      background-color: $card-hover;
     }
 
     h1 {
@@ -29,9 +29,10 @@
 }
 
 .offer_price {
+  margin: 0 auto;
+  font-size: 1.3em;
   text-align: right;
-  background-color: #c0c0c0;
-  color: white;
+  background-color: $card-content;
   padding: 0 3px;
   border-radius: 5px;
   width: fit-content;
@@ -41,7 +42,7 @@
 .offer {
   border-radius: 5px;
   padding: 10px 15px;
-  background-color: #F4F4F4;
+  background-color: $card;
   h1 {
     font-size: 1.2em;
     font-weight: bold;
