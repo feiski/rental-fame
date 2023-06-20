@@ -1,0 +1,13 @@
+a.add {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #F66502;
+  color: white;
+  margin-top: 15px;
+  border-radius: 5px;
+  transition: 0.1s;
+  &:hover {
+    background-color: #f78233;
+  }
+}

@@ -1,8 +1,18 @@
-<% @offers.each do |offer| %>
-  <%= offer.title %>
-  <%= offer.description %>
-  <%= offer.date %>
-  <%= offer.price %>
-  <%= link_to "More info", offer_path(offer.id) %>
-<% end %>
-<%= link_to "New offer", new_offer_path(@offer) %>
+<h1>All the offers :</h1>
+<div class="offers">
+  <% @offers.each do |offer| %>
+    <%= link_to offer_path(offer.id), class: "offer" do %>
+      <h1><%= offer.title %></h1>
+      <div class="offer_desc">
+        <%= offer.description %>
+      </div>
+      <div class="offer_date">
+        <%= offer.date %>
+      </div>
+      <div class="offer_price">
+        $<%= offer.price %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to "New offer", new_offer_path(@offer), class: "add" %>

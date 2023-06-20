@@ -1,0 +1,27 @@
+.offers {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  a.offer {
+    display: inline-block;
+    background-color: #F4F4F4;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+    transition: .1s;
+    flex-grow: 1;
+    margin: 0;
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+
+    h1 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}
