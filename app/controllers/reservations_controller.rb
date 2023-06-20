@@ -4,9 +4,13 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    @reservation = Reservation.new
   end
 
   def create
+    @reservation = Reservation.new(reservation_params)
+    @reservation.save
+    redirect_to reservations_path
   end
 
   def edit
