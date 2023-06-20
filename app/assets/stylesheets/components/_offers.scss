@@ -25,15 +25,15 @@
       font-weight: bold;
       margin: 0;
     }
-
-    .offer_price {
-      text-align: right;
-      background-color: #c0c0c0;
-      color: white;
-      padding: 0 3px;
-      border-radius: 5px;
-      width: fit-content;
-      align-self: flex-end;
-    }
   }
+}
+
+.offer_price {
+  text-align: right;
+  background-color: #c0c0c0;
+  color: white;
+  padding: 0 3px;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: flex-end;
 }
