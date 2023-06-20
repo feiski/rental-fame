@@ -7,7 +7,7 @@
   <% if @offer.photo.key.present? %>
     <%= cl_image_tag @offer.photo.key, class: "photo" %>
   <% else %>
-    <%= image_tag "star", alt: "No Star", class: "photo" %>
+    <%= image_tag "star.jpg", alt: "No Star", class: "photo" %>
   <% end %>
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
