@@ -4,3 +4,4 @@
 <%= @offer.price %>
 <%= link_to "Edit", edit_offer_path(@offer) %>
 <%= link_to "Delete", offer_path(@offer), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<%= link_to "Do a reservation", new_offer_reservation_path(@offer) %>
