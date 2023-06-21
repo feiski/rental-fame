@@ -12,6 +12,12 @@
   <% if current_user == @offer.user %>
     <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
     <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    <ul>      
+      <% @offer.reservations.each do |reservation| %>
+      <li><br><%= link_to reservation.offer.title, edit_reservation_path(reservation) %>
+      <br><%= reservation.comment %></li>
+      <% end %>
+    </ul>    
   <% else %>
   <div class="reserve-wrap">
     <div class="reserve-card">
@@ -30,9 +36,4 @@
 
 </div>
 
-<ul>
-  <% @offer.reservations.each do |reservation| %>
-    <li><br><%= link_to reservation.offer.title, edit_reservation_path(reservation) %>
-    <br><%= reservation.comment %></li>
-  <% end %>
-</ul>
+
