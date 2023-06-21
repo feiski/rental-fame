@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(147, 149, 153, 0.5);
+  align-items: center;
+  background: $secondary-light;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -15,7 +16,7 @@
   width: 50px;
 }
 .dropdown-item {
-  color: #939599;
+  color: $secondary;
   font-size: smaller;
 }
 .search-form {
@@ -34,22 +35,24 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   &:focus {
-    outline: 2px solid #f78233;
+    border: 1px solid $primary;
+    outline: none;
+    box-shadow: 0 0 10px $hover;
   }
 }
 .search-input::placeholder {
-  font-size: 10px;
+  font-size: 12px;
 }
 .fa-magnifying-glass {
   border: none;
   cursor: pointer;
   background: none;
-  color: #F66502;
+  color: $primary;
   position: absolute;
-  right: 0;
-  top: 20px;
+  right: 5px;
+  top: 18px;
   &:hover {
-    color: #f78233;
+    color: $hover;
   }
 }
 .navbar-nav {
@@ -58,10 +61,10 @@
 .nav-item .fa-bell {
   padding: 0 0 42px 8px;
   text-decoration: none;
-  color: #F66502;
+  color: $primary;
   position: relative;
   &:hover {
-    color: #f78233;
+    color: $hover;
   }
 }
 .notification-badge {
@@ -74,4 +77,7 @@
   position: absolute;
   top: -4px;
   right: -4px;
+}
+.nav-item .add {
+  margin-top: -15px;
 }

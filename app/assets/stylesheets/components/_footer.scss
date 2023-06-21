@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgba(147, 149, 153, 0.5);
+  background-color: $secondary-light;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -7,23 +7,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #939599;
   a {
-    color: #939599;
+    color: $primary;
     text-decoration: none;
     transition: 0.1s;
     &:hover {
-      color: #F66502;
+      color: $hover;
     }
   }
 
   i {
     margin: 0 5px;
     transition: 0.3s;
-
-  }
-
-  i.crown:hover {
-    color: #F66502;
+  } .fa-crown {
+    color: $primary;
   }
 }
