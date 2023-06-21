@@ -52,13 +52,9 @@
           <%= link_to edit_reservation_path(reservation) do %>
             <div class="resa">
               <div class="comment">
-                <%= reservation.comment %>
-              </div>
-              <div class="user">
-                John
+                John: <%= reservation.comment %>
               </div>
             <% end %>
-
           </div>
         <% end %>
       </ul>
