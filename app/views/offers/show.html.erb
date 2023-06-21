@@ -45,24 +45,33 @@
 
   </div>
 
-  <div class="resas">
-    <h2>Reservations</h2>
-    <% if current_user == @offer.user %>
+  <% if current_user == @offer.user %>
+    <div class="resas">
+      <h2>Reservations</h2>
+      <% if @offer.reservations.size == 0 %>
+        There is no reservation yet.
+      <% else %>
         <% @offer.reservations.each do |reservation| %>
-          <%= link_to edit_reservation_path(reservation) do %>
+          <%= link_to edit_reservation_path(reservation), class: "resa-link" do %>
             <div class="resa">
               <div class="comment">
                 <%= reservation.comment %>
               </div>
               <div class="user">
-                John
+                by <strong>John</strong>
+              </div>
+              <div class="accepted">
+                <% if reservation.accepted %>
+                  <i class="fa-solid fa-circle-check yes"></i>
+                <% else %>
+                  <i class="fa-solid fa-hourglass-half no"></i>
+                <% end %>
               </div>
             <% end %>
-
           </div>
         <% end %>
-      </ul>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <% end %>
 
 </div>
