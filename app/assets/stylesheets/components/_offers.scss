@@ -1,8 +1,8 @@
 .offers {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 
   a.offer {
     display: inline-block;
@@ -14,7 +14,8 @@
     transition: .1s;
     flex-grow: 1;
     margin: 0;
-    max-width: 250px;
+    width: 290px;
+    height: 430px;
 
     &:hover {
       background-color: $card-hover;
@@ -134,19 +135,29 @@
   }
 }
 
-  .image-wrap img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-
 .offer_title {
   text-align: center;
 }
+
+.photo-index {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px ;
+  object-fit: cover;
+}
+
+.image-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  align-items: center;
+
 
 .text_form label {
  font-size: larger;
  display: flex;
  justify-content:left;
  align-content:center;
+
 }

@@ -6,9 +6,9 @@
     </div>
       <div class="image-wrap">
         <% if offer.photo.key.present? %>
-          <%= cl_image_tag offer.photo.key, class: "photo" %>
+          <%= cl_image_tag offer.photo.key, class: "photo-index" %>
         <% else %>
-          <%= image_tag "Star.png", alt: "No Star", class: "photo" %>
+          <%= image_tag "Star.png", alt: "No Star", class: "photo-index" %>
         <% end %>
       </div>
       <%# <div class="offer_desc"> %>
@@ -23,4 +23,3 @@
     <% end %>
   <% end %>
 </div>
-<%= link_to "New offer", new_offer_path(@offer), class: "add" %>
