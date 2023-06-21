@@ -1,7 +1,9 @@
 <h1>New reservations</h1>
 <%= simple_form_for [@offer, @reservation]  do |f| %>
-  <%= f.input :comment %>
-  <%= f.submit %>
+  <div class="text_form">
+    <%= f.input :comment %>
+  </div>
+  <%= f.submit class: "btn_form" %>
 <% end %>
 
 <%= link_to "return to the home-pages", root_path %>
