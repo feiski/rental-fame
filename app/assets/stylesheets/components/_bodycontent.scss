@@ -1,11 +1,13 @@
 .bodycontent {
-  background-color: rgb(255, 255, 255);
-  width: 900px;
+  background-color: rgba(128, 128, 128, 0);
+  width: 77vw;
+  height: 100vh;
   margin: 0 auto;
-  padding: 20px 22px;
-  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 425px;
   margin-top: 75px;
-
   h1 {
     font-size: 1.5em;
     margin-left: 13px;

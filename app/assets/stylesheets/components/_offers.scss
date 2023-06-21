@@ -1,8 +1,8 @@
 .offers {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 
   a.offer {
     display: inline-block;
@@ -14,7 +14,8 @@
     transition: .1s;
     flex-grow: 1;
     margin: 0;
-    max-width: 250px;
+    width: 290px;
+    height: 430px;
 
     &:hover {
       background-color: $card-hover;
@@ -53,15 +54,16 @@
   .photo {
     width: 300px;
     height: 300px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px;
     object-fit: cover;
-    border: 1px solid #9d9d9d;
+    border: 1px solid $secondary-light;
   }
 }
 
 .image-wrap {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 10px;
   margin: 20px 0;
 }
