@@ -40,15 +40,37 @@
   align-self: flex-end;
 }
 
-.offer {
-  border-radius: 5px;
-  padding: 10px 15px;
+.offer-wrap {
   background-color: $card;
+  padding-bottom: 30px;
+}
 
-  h1 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0;
+.offer {
+  padding: 35px 45px;
+  display: flex;
+
+  .text {
+    border-radius: 20px 0 0 20px;
+    padding: 35px 45px;
+    background-color: white;
+    margin-top: 22px;
+    width: 500px;
+    height: 460px;
+
+    h1 {
+      font-size: 1.7em;
+      font-weight: bold;
+      margin: 0 0 15px 0;
+    }
+
+    .offer_desc {
+      height: 70%;
+      overflow: scroll;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 10px;
+    }
   }
 
   .photo {
@@ -58,20 +80,62 @@
     object-fit: cover;
   }
 
-  .photo-index {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-    border: 1px solid $secondary-light;
+  .info-wrap {
+    background-color: #E6E6E6;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+
+    .date-block {
+      text-align: right;
+      border-right: 1px solid black;
+      padding-right: 13px;
+      margin-right: 13px;
+      h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+        margin: 0;
+      }
+      .offer_date {
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+    }
+
+    .price-block {
+      font-weight: bold;
+      font-size: 2.3em;
+    }
+  }
+
+  .border-bottom {
+    height: 12px;
+    background-color: #8E8E8E;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .border-right {
+    width: 30px;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    margin-top: 22px;
+    height: 460px;
+  }
+
+
+}
+
+.resas {
+  text-align: center;
+
+  a .resa {
+    text-decoration: none;
   }
 }
 
-.image-wrap img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
+
 
 .offer_title {
   text-align: center;

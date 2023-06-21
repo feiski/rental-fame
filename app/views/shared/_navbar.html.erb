@@ -13,9 +13,13 @@
       </form>
     </div>
 
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+          <li class="nav-item new-offer">
+            <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
+          </li>
         <li class="nav-item dropdown">
         <a href="" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar", alt: "dropdown menu" %>

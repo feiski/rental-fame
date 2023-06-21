@@ -1,39 +1,68 @@
-<div class="offer">
-  <h1><%= @offer.title %></h1>
-  <div class="offer_desc">
-    <%= @offer.description %>
-  </div>
-  <div class="image-wrap">
-  <% if @offer.photo.key.present? %>
-    <%= cl_image_tag @offer.photo.key, class: "photo" %>
-  <% else %>
-    <%= image_tag "Star.png", alt: "No Star", class: "photo" %>
-  <% end %>
-  <% if current_user == @offer.user %>
-    <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
-    <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-    <ul>      
-      <% @offer.reservations.each do |reservation| %>
-      <li><br><%= link_to reservation.offer.title, edit_reservation_path(reservation) %>
-      <br><%= reservation.comment %></li>
-      <% end %>
-    </ul>    
-  <% else %>
-  <div class="reserve-wrap">
-    <div class="reserve-card">
-      <h2>Date of this event: </h2>
-      <div class="offer_date">
-        <%= @offer.date.day %>/<%= @offer.date.month %>/<%= @offer.date.year %>
-      </div>
-      <h2>Price:</h2>
-      <div class="offer_price">$<%= @offer.price %></div>
-      <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "add" %>
-    </div>
-  </div>
-  <% end %>
+<div class="offer-wrap">
 
+  <div class="offer">
+    <div class="text">
+      <h1><%= @offer.title %></h1>
+      <div class="offer_desc">
+        <%= @offer.description %>
+      </div>
+      <div class="cta">
+        <% if current_user == @offer.user %>
+          <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
+          <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        <% else %>
+          <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "add" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="image-wrap">
+    <% if @offer.photo.key.present? %>
+      <%= cl_image_tag @offer.photo.key, class: "photo" %>
+    <% else %>
+      <%= image_tag "Star.png", alt: "No Star", class: "photo" %>
+    <% end %>
+      <div class="info-wrap">
+        <div class="info">
+          <div class="date-block">
+            <h2>Available on</h2>
+            <div class="offer_date">
+              <%= @offer.date.day %>/<%= @offer.date.month %>/<%= @offer.date.year %>
+            </div>
+          </div>
+          <div class="price-block">
+            $<%= @offer.price %>
+          </div>
+        </div>
+      </div>
+      <div class="border-bottom">
+      </div>
+
+    </div>
+
+    <div class="border-right">
+    </div>
+
+  </div>
+
+  <div class="resas">
+    <h2>Reservations</h2>
+    <% if current_user == @offer.user %>
+        <% @offer.reservations.each do |reservation| %>
+          <%= link_to edit_reservation_path(reservation) do %>
+            <div class="resa">
+              <div class="comment">
+                <%= reservation.comment %>
+              </div>
+              <div class="user">
+                John
+              </div>
+            <% end %>
+
+          </div>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 
 </div>
-
-
