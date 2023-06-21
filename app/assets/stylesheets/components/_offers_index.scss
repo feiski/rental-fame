@@ -1,0 +1,56 @@
+.offers-index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  a.offer-index {
+    display: inline-block;
+    background-color: $card;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+    transition: .1s;
+    flex-grow: 1;
+    margin: 0;
+    width: 290px;
+    height: 430px;
+
+    &:hover {
+      background-color: $card-hover;
+    }
+
+    h1 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}
+
+.offer-price-index {
+  margin: 0 auto;
+  font-size: 1.3em;
+  text-align: right;
+  background-color: $card-content;
+  padding: 0 3px;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.photo-index {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.image-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  align-items: center;
+}
