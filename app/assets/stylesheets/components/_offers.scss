@@ -138,6 +138,7 @@
 .offer_title {
   text-align: center;
 }
+
 .photo-index {
   width: 300px;
   height: 300px;
@@ -151,4 +152,12 @@
   gap: 10px;
   margin: 20px 0;
   align-items: center;
+
+
+.text_form label {
+ font-size: larger;
+ display: flex;
+ justify-content:left;
+ align-content:center;
+
 }

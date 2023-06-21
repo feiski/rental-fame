@@ -1,11 +1,19 @@
 
 <%= simple_form_for(@offer) do |f| %>
-  <%= f.input :title %>
+<div class="text_form">
+  <%= f.input  :title %>
+</div>
+<div class="text_form">
   <%= f.input :description %>
+</div>
+<div class="text_form">
   <%= f.input :date %>
+</div>
+<div class="text_form">
   <%= f.input :price %>
+</div>
+<div class="text_form btn_photo">
   <%= f.input :photo, as: :file %>
-  <%= button_tag do %>
-      Submit
-    <% end %>
-  <% end %>
+</div>
+<%= f.submit class: "btn_form" %>
+<% end %>
