@@ -3,6 +3,8 @@
 <p><%= @reservation.comment %></p>
 
 <%= simple_form_for [@offer, @reservation]  do |f| %>
-  <%= f.input :accepted %>
-  <%= f.submit %>
+  <div class="text_form">
+    <%= f.input :accepted %>
+  </div>
+  <%= f.submit class: "btn_form" %>
 <% end %>

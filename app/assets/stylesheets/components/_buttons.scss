@@ -29,3 +29,22 @@ a.delete {
     background-color: $hover;
   }
 }
+
+.btn_form {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 20px;
+  color: white;
+  margin-top: 15px;
+  border: 0px;
+  border-radius: 5px;
+  transition: 0.1s;
+  background-color: $primary;
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+// .btn_photo {
+//   background-color: $blue ;
+// }
