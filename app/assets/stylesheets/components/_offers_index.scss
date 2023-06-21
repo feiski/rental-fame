@@ -2,21 +2,22 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 
   a.offer-index {
     display: inline-block;
     background-color: $card;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none;
     color: rgb(40, 40, 40);
     transition: .1s;
     flex-grow: 1;
     margin: 0;
-    width: 290px;
-    height: 430px;
-
+    max-width: 340px;
+    max-height: 420px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
     &:hover {
       background-color: $card-hover;
     }
@@ -32,12 +33,10 @@
 .offer-price-index {
   margin: 0 auto;
   font-size: 1.3em;
-  text-align: right;
   background-color: $card-content;
   padding: 0 3px;
   border-radius: 5px;
   width: fit-content;
-  align-self: flex-end;
 }
 
 .photo-index {
