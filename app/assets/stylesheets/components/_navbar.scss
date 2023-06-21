@@ -6,46 +6,56 @@
   top: 0;
   width: 100%;
 }
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
+
 .navbar-lewagon .navbar-brand img {
   height: 50px;
   transform: scale(2);
   padding-left: 20px;
 }
+
 .avatar {
   height: 50px;
   width: 50px;
 }
+
 .dropdown-item {
   color: $secondary;
   font-size: smaller;
 }
+
 .search-form {
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
+
 .input-container {
   position: relative;
   width: 100%;
 }
+
 .search-input {
   padding: 8px;
   border: none;
   width: 42vh;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   &:focus {
     border: 1px solid $primary;
     outline: none;
     box-shadow: 0 0 10px $hover;
   }
 }
+
 .search-input::placeholder {
   font-size: 12px;
 }
+
 .fa-magnifying-glass {
   border: none;
   cursor: pointer;
@@ -54,22 +64,27 @@
   position: absolute;
   right: 5px;
   top: 18px;
+
   &:hover {
     color: $hover;
   }
 }
+
 .navbar-nav {
   align-items: center;
 }
+
 .nav-item .fa-bell {
   padding: 0 0 42px 8px;
   text-decoration: none;
   color: $primary;
   position: relative;
+
   &:hover {
     color: $hover;
   }
 }
+
 .notification-badge {
   background-color: red;
   color: white;
@@ -81,6 +96,12 @@
   top: -4px;
   right: -4px;
 }
+
 .nav-item .add {
   margin-top: -15px;
+}
+
+.new-offer {
+  margin-right: 50px;
+  margin-top: central;
 }
