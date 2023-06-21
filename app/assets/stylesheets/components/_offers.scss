@@ -143,26 +143,9 @@
   text-align: center;
 }
 
-.photo-index {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.image-wrap {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-  align-items: center;
-
-
-  .text_form label {
+.text_form label {
     font-size: larger;
     display: flex;
     justify-content: left;
     align-content: center;
-
   }
-}
