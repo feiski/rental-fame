@@ -1,21 +1,19 @@
-
-<%= simple_form_for(@offer) do |f| %>
-<div class="text_form">
-  <%= f.input  :title %>
+<div class="new-offer-wrap">
+  <h1>Let's create an amazing offer!</h1>
+  <%= simple_form_for @offer do |f| %>
+    <div class="text_form"><%= f.input :title %></div>
+    <div class="text_form"><%= f.input :description %></div>
+    <div class="date-price">
+      <%= f.input :date,
+                as: :string,
+                input_html: { data: { controller: "datepicker" } } %>
+      <%= f.input :price %>
+    </div>
+    <div class="text_form btn_photo">
+      <%= f.input :photo, as: :file %>
+    </div>
+    <div class="submit-wrap">
+      <%= f.submit class: "btn_form" %>
+    </div>
+  <% end %>
 </div>
-<div class="text_form">
-  <%= f.input :description %>
-</div>
-<div class="text_form">
-  <%= f.input :date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-</div>
-<div class="text_form">
-  <%= f.input :price %>
-</div>
-<div class="text_form btn_photo">
-  <%= f.input :photo, as: :file %>
-</div>
-<%= f.submit class: "btn_form" %>
-<% end %>
