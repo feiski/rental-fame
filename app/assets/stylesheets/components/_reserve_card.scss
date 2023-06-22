@@ -29,3 +29,18 @@
     background-color: $card-content;
   }
 }
+
+.photo-form {
+  width: 200px;
+  height: 200px;
+}
+
+.cards_reservations{
+  display: flex;
+}
+
+.card_reservation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
