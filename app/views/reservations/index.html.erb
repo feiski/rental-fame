@@ -8,14 +8,18 @@
         <% else %>
           <%= image_tag "Star.png", alt: "No Star", class: "photo-form" %>
         <% end %>
-        <span><%= reservation.offer.date %></span>
+        <div class="card_comment">
+        <span class="data_reserv"><%= reservation.offer.date %></span>
+        <div class="comment_reserv">
         <br><%= reservation.comment %>
+        </div>
+        </div>
       </div>
-      <div class="card_reservation">
+      <div class="footer_reservation">
         <% if reservation.accepted? %>
-        Accepted
+        <p class="footer_status">Accepted</p>
         <% else %>
-        Pending
+        <p class="footer_status">Pending</p>
         <% end %>
          <%= link_to "Delete this reservation", reservation_path(reservation),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"add" %>
