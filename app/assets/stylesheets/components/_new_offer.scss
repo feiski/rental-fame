@@ -1,0 +1,23 @@
+.new-offer-wrap {
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 40px;
+  width: 600px;
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .date-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .submit-wrap {
+    text-align: center;
+  }
+}
