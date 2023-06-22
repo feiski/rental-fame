@@ -21,7 +21,8 @@ puts 'Loading please wait...'
 20.times do
   User.create!(
     email: Faker::Internet.email,
-    password: Faker::Internet.password(min_length: 6)
+    password: Faker::Internet.password(min_length: 6),
+    nickname: Faker::Name.name
   )
 end
 puts 'Users created'

@@ -57,11 +57,20 @@
 
 .card_comment {
   width: 400px;
-  background-color: $secondary;
+  background-color: $secondary-light;
 
 }
 
 .footer_status {
   color: $primary;
+  font-weight: bold;
+}
+
+.global-container {
+  margin: 20px;
+}
+
+.footer_accepted {
+  color: $green;
   font-weight: bold;
 }

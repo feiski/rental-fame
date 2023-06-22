@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     @offers = Offer.order(:date).limit(3)
   end
+
+  def profil
+  end
 end
