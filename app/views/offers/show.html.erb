@@ -48,15 +48,21 @@
       <% if @offer.reservations.size == 0 %>
        <p>There is no reservation for this offer yet.</p>
       <% else %>
+        <div class="resa-wrap">
         <% @offer.reservations.each do |reservation| %>
-          <%= link_to edit_reservation_path(reservation) do %>
             <div class="resa">
+              <h1>John</h1>
               <div class="comment">
-                John: <%= reservation.comment %>
+                <span class="quote">“</span>
+                <p><%= reservation.comment %></p>
               </div>
-            <% end %>
+              <div class="btns">
+                <%= link_to "Accept this reservation!", root_path, class: "btn_form" %>
+                <%= link_to "Decline", root_path, class: "btn_form secondary" %>
+              </div>
           </div>
         <% end %>
+        </div>
       <% end %>
     <% else %>
       <% if @reserved %>
