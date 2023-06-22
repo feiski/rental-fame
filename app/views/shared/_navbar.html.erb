@@ -1,40 +1,37 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar">
   <div class="container-fluid">
-    <%= link_to offers_path, class: "navbar-brand" do %>
-      <%= image_tag image_path("logo.png"), class: "navbar-brand img" %>
+    <%= link_to root_path do %>
+      <%= image_tag image_path("logo.png"), class: "logo" %>
     <% end %>
 
-    <div>
+    <div class="">
+      <% if user_signed_in? %>
+        <div class="nav-button">
+          <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
+        </div>
+        <div class="nav-button">
+            <%= link_to pages_profile_path do %>
+              <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar", id: "avatarButton" %>
+            <% end %>
+            <%= link_to "My reservations", reservations_path, class: "dropdown-item" %>
+            <%= link_to "My offers", offers_path(show_owned: true), class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        </div>
+      <% else %>
+        <div class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "add" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+    <%# <div>
       <form action="/search" method="GET" class="search-form">
         <div class="input-container">
           <input type="text" name="query" placeholder="Find an offer" class="search-input">
           <button type="submit" class="fa-solid fa-magnifying-glass fa-lg"></button>
         </div>
       </form>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item new-offer">
-            <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar", alt: "dropdown menu" %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "My reservations", reservations_path, class: "dropdown-item" %>
-              <%= link_to "My offers", offers_path(show_owned: true), class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "add" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
+    </div> %>
