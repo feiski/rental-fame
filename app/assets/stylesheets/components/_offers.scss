@@ -65,7 +65,7 @@
 
     .offer_desc {
       height: 70%;
-      overflow: scroll;
+      overflow: auto;
     }
 
     .cta {
@@ -127,8 +127,6 @@
     margin-top: 22px;
     height: 460px;
   }
-
-
 }
 
 .resas {
@@ -143,9 +141,11 @@
   text-align: center;
 }
 
+
 .text_form label {
-    font-size: larger;
-    display: flex;
-    justify-content: left;
-    align-content: center;
-  }
+  font-size: larger;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+}
+
