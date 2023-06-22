@@ -1,20 +1,29 @@
-<div class="reservation">
+<div>
   <% if @reservations.present? %>
     <% @reservations.each do |reservation| %>
       <h1><%= reservation.offer.title %></h1>
-      <div class="reservation">
-        <%= reservation.comment %>
-      </div>
-      <div class="reservation">
-        <%= reservation.offer.date %><span> : </span>
-        <% if reservation.accepted? %>
-        Accepted
+      <div class="cards_reservations">
+        <% if reservation.offer.photo.key.present? %>
+          <%= cl_image_tag reservation.offer.photo.key, class: "photo-form" %>
         <% else %>
-        Pending
+          <%= image_tag "Star.png", alt: "No Star", class: "photo-form" %>
         <% end %>
+        <div class="card_comment">
+        <span class="data_reserv"><%= reservation.offer.date %></span>
+        <div class="comment_reserv">
+        <br><%= reservation.comment %>
+        </div>
+        </div>
       </div>
-        <%= link_to "Delete this reservation", reservation_path(reservation),
+      <div class="footer_reservation">
+        <% if reservation.accepted? %>
+        <p class="footer_status">Accepted</p>
+        <% else %>
+        <p class="footer_status">Pending</p>
+        <% end %>
+         <%= link_to "Delete this reservation", reservation_path(reservation),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"add" %>
+      </div>
       <hr class="separator">
     <% end %>
   <% else %>
