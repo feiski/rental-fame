@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="offers-index">
   <% @offers.each do |offer| %>
     <%= link_to offer_path(offer.id), class: "offer-index" do %>
@@ -11,12 +23,6 @@
           <%= image_tag "Star.png", alt: "No Star", class: "photo-index" %>
         <% end %>
       </div>
-      <%# <div class="offer_desc"> %>
-        <%# <%= offer.description %>
-      <%# </div> %>
-      <%# <div class="offer_date"> %>
-        <%# <%= offer.date %>
-      <%# </div> %>
       <div class="offer-price-index">
         $<%= offer.price %>
       </div>
