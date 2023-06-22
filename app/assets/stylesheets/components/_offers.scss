@@ -144,8 +144,20 @@
 }
 
 .text_form label {
-    font-size: larger;
-    display: flex;
-    justify-content: left;
-    align-content: center;
-  }
+  font-size: larger;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+}
+
+// .text_form {
+//   display: flex;
+//   justify-content: left;
+//   align-content: center;
+// }
+
+.container_form_offer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
