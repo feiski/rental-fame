@@ -6,6 +6,9 @@ class OffersController < ApplicationController
   def index
     if params[:show_owned]
       @offers = current_user.offers
+    elsif params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
     else
       @offers = Offer.all
     end
