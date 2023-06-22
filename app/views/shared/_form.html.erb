@@ -1,3 +1,5 @@
+
+
 <div class=container_form_offer>
   <%= simple_form_for(@offer) do |f| %>
   <div class="text_form">
@@ -7,7 +9,9 @@
     <%= f.input :description %>
   </div>
   <div class="text_form">
-    <%= f.input :date, html5: true %>
+    <%= f.input :date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
   </div>
   <div class="text_form">
     <%= f.input :price %>
