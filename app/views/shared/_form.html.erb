@@ -7,7 +7,9 @@
   <%= f.input :description %>
 </div>
 <div class="text_form">
-  <%= f.input :date %>
+  <%= f.input :date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
 </div>
 <div class="text_form">
   <%= f.input :price %>

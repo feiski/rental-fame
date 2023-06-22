@@ -11,12 +11,14 @@
           <%= link_to "Edit", edit_offer_path(@offer), class: "edit" %>
           <%= link_to "", offer_path(@offer), class: "fa-solid fa-trash-can fa-lg", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
         <% else %>
-          <%= link_to "Make a reservation", new_offer_reservation_path(@offer), class: "add" %>
+          <div>
+            <%= render "shared/resaform", reservation: @reservation %>
+          </div>
         <% end %>
       </div>
     </div>
 
-    <div class="image-wrap">
+    <div class="offer-image-wrap">
     <% if @offer.photo.key.present? %>
       <%= cl_image_tag @offer.photo.key, class: "photo" %>
     <% else %>
