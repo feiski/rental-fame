@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :reservations, only: %i[index destroy edit update]
 
   root to: "pages#home"
+  get "profil", to: "pages#profil"
 end
