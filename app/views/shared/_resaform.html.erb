@@ -1,0 +1,8 @@
+<% reservation ||= Reservation.new %>
+
+<%= simple_form_for([@offer, reservation]) do |f| %>
+  <div class="text_form">
+    <%= f.input :comment %>
+  </div>
+  <%= f.submit class: "btn_form" %>
+<% end %>
