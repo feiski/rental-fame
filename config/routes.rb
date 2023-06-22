@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   end
   resources :reservations, only: %i[index destroy edit update]
 
-  root to: "offers#index"
+  root to: "pages#home"
 end
