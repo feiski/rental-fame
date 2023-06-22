@@ -1,4 +1,4 @@
-<div>
+<div class="global-container">
   <% if @reservations.present? %>
     <% @reservations.each do |reservation| %>
       <h1><%= reservation.offer.title %></h1>
@@ -21,7 +21,7 @@
         <% else %>
         <p class="footer_status">Pending</p>
         <% end %>
-         <%= link_to "Delete this reservation", reservation_path(reservation),
+        <%= link_to "Delete this reservation", reservation_path(reservation),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"add" %>
       </div>
       <hr class="separator">
