@@ -14,7 +14,7 @@ class ReservationsController < ApplicationController
     @reservation.offer = @offer
     @reservation.user = current_user
     if @reservation.save
-      redirect_to root_path
+      redirect_to reservations_path
     else
       render :new, status: :unprocessable_entity
     end
