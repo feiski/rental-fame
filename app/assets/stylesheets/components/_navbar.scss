@@ -1,20 +1,26 @@
-.navbar-display {
-  background-color: $secondary-light;
+.navbar-container {
+  background-color: $secondary;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+} .navbar-display {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  position: fixed;
   align-items: center;
-  top: 0;
+  width: 77vw;
+  margin: 0 auto;
 } .logo {
-  height: 50px;
-  transform: scale(2);
+  height: 80px;
 } .avatar {
   height: 50px;
   width: 50px;
+  border-radius: 50%;
 } .nav-button {
 margin-bottom: 22px;
 }
+
+
 
 // .nav-item .add {
 //   margin-top: -15px;
