@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="offers-index">
   <% @offers.each do |offer| %>
     <%= link_to offer_path(offer.id), class: "offer-index" do %>
@@ -28,4 +16,5 @@
       </div>
     <% end %>
   <% end %>
+</div>
 </div>
