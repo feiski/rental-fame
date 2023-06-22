@@ -74,3 +74,15 @@
   color: $green;
   font-weight: bold;
 }
+
+.responce {
+  width: 400px;
+  height: 100px;
+  font-size: larger;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
