@@ -14,6 +14,10 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     @reservations = @offer.reservations
+    @reserved = false
+    @reservations.each do |reservation|
+      @reserved = true if reservation.user == current_user
+    end
   end
 
   def new
