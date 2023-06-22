@@ -1,111 +1,93 @@
-.navbar-lewagon {
+.navbar-display {
+  background-color: $secondary-light;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: $secondary-light;
+  width: 100vw;
   position: fixed;
+  align-items: center;
   top: 0;
-  width: 100%;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+} .logo {
   height: 50px;
   transform: scale(2);
-  padding-left: 285px;
-}
-
-.avatar {
+} .avatar {
   height: 50px;
   width: 50px;
-  margin-right: 225px;
+} .nav-button {
+margin-bottom: 22px;
 }
 
-.dropdown-item {
-  color: $secondary;
-  font-size: smaller;
-}
+// .nav-item .add {
+//   margin-top: -15px;
+// } .add{
+//   margin-right: 225px;
+// }
 
-.search-form {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  margin-left: 50px;
-}
+// -- Seach form --
 
-.input-container {
-  position: relative;
-  width: 100%;
-}
+// .input-container {
+//   position: relative;
+//   width: 100%;
+// }
 
-.search-input {
-  padding: 8px;
-  border: none;
-  width: 42vh;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// .search-form {
+//   display: flex;
+//   align-items: center;
+//   flex-grow: 1;
+//   justify-content: center;
+//   margin-left: 50px;
+// }
 
-  &:focus {
-    border: 1px solid $primary;
-    outline: none;
-    box-shadow: 0 0 10px $hover;
-  }
-}
+// .search-input {
+//   padding: 8px;
+//   border: none;
+//   width: 42vh;
+//   border-radius: 20px;
+//   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//   &:focus {
+//     border: 1px solid $primary;
+//     outline: none;
+//     box-shadow: 0 0 10px $hover;
+//   }
+// }
 
-.search-input::placeholder {
-  font-size: 12px;
-}
+// .search-input::placeholder {
+//   font-size: 12px;
+// }
 
-.fa-magnifying-glass {
-  border: none;
-  cursor: pointer;
-  background: none;
-  color: $primary;
-  position: absolute;
-  right: 5px;
-  top: 18px;
+// .fa-magnifying-glass {
+//   border: none;
+//   cursor: pointer;
+//   background: none;
+//   color: $primary;
+//   position: absolute;
+//   right: 5px;
+//   top: 18px;
+//   &:hover {
+//     color: $hover;
+//   }
+// }
 
-  &:hover {
-    color: $hover;
-  }
-}
 
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
+// -- Notifications --
 
-.nav-item .fa-bell {
-  padding: 0 0 42px 8px;
-  text-decoration: none;
-  color: $primary;
-  position: relative;
+// .nav-item .fa-bell {
+//   padding: 0 0 42px 8px;
+//   text-decoration: none;
+//   color: $primary;
+//   position: relative;
+//   &:hover {
+//     color: $hover;
+//   }
+// }
 
-  &:hover {
-    color: $hover;
-  }
-}
-
-.notification-badge {
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  border-color: white;
-  padding: 0 3px 0 3px;
-  font-size: 8px;
-  position: absolute;
-  top: -4px;
-  right: -4px;
-}
-
-.nav-item .add {
-  margin-top: -15px;
-}
-
-.new-offer {
-  margin-right: 225px;
-}
+// .notification-badge {
+//   background-color: red;
+//   color: white;
+//   border-radius: 50%;
+//   border-color: white;
+//   padding: 0 3px 0 3px;
+//   font-size: 8px;
+//   position: absolute;
+//   top: -4px;
+//   right: -4px;
+// }
