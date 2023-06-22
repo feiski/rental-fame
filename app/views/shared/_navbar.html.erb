@@ -1,31 +1,29 @@
-<div class="navbar">
-  <div class="container-fluid">
-
+<div class="navbar-container">
+  <div class="navbar-display">
     <%= link_to root_path do %>
       <%= image_tag image_path("logo.png"), class: "logo" %>
     <% end %>
 
-    <div class="">
-      <% if user_signed_in? %>
-        <div class="nav-button">
-          <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
-        </div>
-        <div class="nav-button">
-            <%= link_to pages_profile_path do %>
-              <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar", id: "avatarButton" %>
-            <% end %>
-            <%= link_to "My reservations", reservations_path, class: "dropdown-item" %>
-            <%= link_to "My offers", offers_path(show_owned: true), class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-        </div>
-      <% else %>
-        <div class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "add" %>
-        </div>
-      <% end %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="nav-button">
+        <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
+        <%= link_to "My reservations", reservations_path, class: "add" %>
+        <%= link_to "My offers", offers_path(show_owned: true), class: "add" %>
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "add" %>
+      </div>
+      <div class="avatar">
+        <%= link_to profil_path do %>
+          <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar" %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="nav-button">
+        <%= link_to "Login", new_user_session_path, class: "add" %>
+      </div>
+    <% end %>
   </div>
 </div>
+
 
 
     <%# <div>

@@ -1,31 +1,19 @@
-.container-fluid{
+.navbar-display {
+  background-color: $secondary-light;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: $secondary-light;
+  width: 100vw;
   position: fixed;
+  align-items: center;
   top: 0;
-  // width: 100%;
-  // flex-grow: 1;
-}.logo {
+} .logo {
   height: 50px;
   transform: scale(2);
-  // padding-left: 285px;
 } .avatar {
   height: 50px;
   width: 50px;
-  // margin-right: 225px;
-}
-
-.dropdown-item {
-  color: $secondary;
-  font-size: smaller;
-}
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+} .nav-button {
+margin-bottom: 22px;
 }
 
 // .nav-item .add {
