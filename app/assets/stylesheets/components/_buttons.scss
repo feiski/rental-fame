@@ -1,4 +1,7 @@
-a.add, a.reserve, a.edit, a.delete {
+a.add,
+a.reserve,
+a.edit,
+a.delete {
   text-decoration: none;
   display: inline-block;
   padding: 5px 20px;
@@ -7,10 +10,13 @@ a.add, a.reserve, a.edit, a.delete {
   border-radius: 5px;
   transition: 0.1s;
   background-color: $primary;
+  // margin-right: 420px;
 }
 
-a.add, a.edit {
+a.add,
+a.edit {
   background-color: $primary;
+
   &:hover {
     background-color: $hover;
   }
@@ -18,13 +24,15 @@ a.add, a.edit {
 
 a.reserve {
   background-color: $primary;
+
   &:hover {
     background-color: $hover;
   }
 }
 
 a.delete {
-  background-color:  $primary;
+  background-color: $primary;
+
   &:hover {
     background-color: $hover;
   }
@@ -40,6 +48,7 @@ a.delete {
   border-radius: 5px;
   transition: 0.1s;
   background-color: $primary;
+
   &:hover {
     background-color: $hover;
   }
