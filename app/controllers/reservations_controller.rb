@@ -24,6 +24,26 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
+  def accept
+    @reservation = Reservation.find(params[:id])
+    @reservation.accepted = true
+    if @reservation.save!
+      redirect_to offer_path(@reservation.offer)
+    else
+      render "offers#show", status: :unprocessable_entity
+    end
+  end
+
+  def reject
+    @reservation = Reservation.find(params[:id])
+    @reservation.accepted = false
+    if @reservation.save!
+      redirect_to offer_path(@reservation.offer)
+    else
+      render "offers#show", status: :unprocessable_entity
+    end
+  end
+
   def update
     @reservation = Reservation.find(params[:id])
     @reservation.accepted = true

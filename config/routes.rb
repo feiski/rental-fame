@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :offers do
     resources :reservations, only: %i[new create]
   end
-  resources :reservations, only: %i[index destroy edit update]
+  resources :reservations, only: %i[index destroy edit update] do
+    member do
+      patch :accept, to: "reservations#accept", as: :accept
+      patch :reject, to: "reservations#reject", as: :reject
+    end
+  end
 
   root to: "pages#home"
   get "profil", to: "pages#profil"

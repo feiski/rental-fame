@@ -55,10 +55,15 @@
               <div class="comment">
                 <span class="quote">“</span>
                 <p><%= reservation.comment %></p>
+
               </div>
               <div class="btns">
-                <%= link_to "Accept this reservation!", root_path, class: "btn_form" %>
-                <%= link_to "Decline", root_path, class: "btn_form secondary" %>
+                <% if reservation.accepted %>
+                  <p class="accepted"><i class="fa-solid fa-circle-check"></i>Reservation accepted!</p>
+                <% else %>
+                  <%= link_to "Accept this reservation!", accept_reservation_path(reservation), data: { turbo_method: :patch }, class: "btn_form" %>
+                <% end %>
+                <%= link_to "Decline", reject_reservation_path(reservation), data: { turbo_method: :patch }, class: "btn_form secondary" %>
               </div>
           </div>
         <% end %>
