@@ -6,47 +6,49 @@
 
   a.offer-index {
     display: inline-block;
-    background-color: $card;
-    padding: 10px 15px;
+    background-color: white;
+    padding: 0;
     text-decoration: none;
     color: rgb(40, 40, 40);
     transition: .1s;
     flex-grow: 1;
     margin: 0;
-    max-width: 340px;
+    max-width: 300px;
     max-height: 420px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    &:hover {
-      background-color: $card-hover;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:  0px 4px 5px rgba(0, 0, 0, 0.05);
+    &:hover {
+      background-color: lin$card-hover;
+
+      .photo-index {
+        opacity: 0.7;
+      }
+    }
+
+    .photo-index {
+      width: 300px;
+      height: 300px;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+      margin: 0;
+      transition: 0.2s;
     }
 
     h1 {
+      font-family: 'Inter', sans-serif;
       font-size: 1.2em;
-      font-weight: bold;
-      margin: 0;
+      font-weight: 500;
+      margin: 12px 0 2px 0;
+      color: black;
+    }
+
+    .offer-price-index {
+      font-family: 'Inter', sans-serif;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-size: 1.4em;
+      font-weight: 700;
     }
   }
-}
-
-.offer-price-index {
-  margin: 0 auto;
-  font-size: 1.3em;
-  background-color: $card-content;
-  padding: 0 3px;
-  border-radius: 5px;
-  width: fit-content;
-}
-
-.photo-index {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.image-wrap {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-  align-items: center;
 }
