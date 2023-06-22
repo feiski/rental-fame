@@ -1,19 +1,36 @@
 <div class="homepage-container">
 
-<div class="banner">
-  <%= image_tag "oscar_selfie.webp", alt: "Banner Image" %>
-  <h2 class="banner-title">What are you doing this weekend</h2>
-</div>
+  <div class="banner">
+    <%= image_tag "oscar_selfie.webp", alt: "Banner Image" %>
+  </div>
 
-<div id="random-idea">
-  <span class="sentences" data-controller="typed"
-  data-typed-sentences-value="<%= ["Maybe... A baseball with Paul Goldschmidt ?", "Maybe.. A dinner with Leonardo DiCaprio ?",
-  "Maybe.. A cooking class with Gordon Ramsay ?", "Maybe.. Organise a golf tournament with Tiger Woods ?", "Maybe.. Learn graffiti art in a art workshop with Banksy ?",
-  "Maybe.. A yoga retreat with Gwyneth Paltrow ?", "Maybe.. A private concert with Adele ?", "Maybe.. A fashion workshop with Karl Lagerfeld ?",
-  "Maybe.. A surfing expedition with Kelly Slater ?", "Maybe.. An exclusive film screening with Steven Spielberg ?", "Or maybe.. A wine tasting with Robert Mondavi Jr ?"].to_json %>">
-  </span>
-</div>
+  <div id="typed-container">
+    <h2 class="banner-title">What are you doing this weekend</h2>
+    <span class="sentences" data-controller="typed"
+    data-typed-sentences-value="<%= ["Maybe... A baseball with Paul Goldschmidt ?", "Maybe.. A dinner with Leonardo DiCaprio ?",
+    "Maybe.. A cooking class with Gordon Ramsay ?", "Maybe.. Organise a golf tournament with Tiger Woods ?", "Maybe.. Learn graffiti art in a workshop with Banksy ?",
+    "Maybe.. A yoga retreat with Gwyneth Paltrow ?", "Maybe.. A private concert with Adele ?","Maybe.. A surfing expedition with Kelly Slater ?",
+    "Maybe.. An exclusive film screening with Steven Spielberg ?", "Maybe.. A wine tasting with Robert Mondavi Jr ?"].to_json %>">
+    </span>
+  </div>
 
-<div class="browse-offers">
-<%= link_to "Browse our offers", offers_path, class: "add" %>
+  <div class="browse-offers">
+    <%= link_to "Browse our offers", offers_path, class: "add" %>
+  </div>
+
+
+<div class="offers-index">
+  <% @offers.each do |offer| %>
+    <%= link_to offer_path(offer.id), class: "offer-index" do %>
+      <% if offer.photo.key.present? %>
+        <%= cl_image_tag offer.photo.key, class: "photo-index" %>
+      <% else %>
+        <%= image_tag "Star.png", alt: "No Star", class: "photo-index" %>
+      <% end %>
+      <h1><%= offer.title %></h1>
+      <div class="offer-price-index">$<%= offer.price %></div>
+    <% end %>
+  <% end %>
+</div>
+</div>
 </div>

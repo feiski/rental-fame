@@ -29,3 +29,39 @@
     background-color: $card-content;
   }
 }
+
+.photo-form {
+  width: 200px;
+  height: 200px;
+}
+
+.cards_reservations{
+  display: flex;
+}
+
+.footer_reservation {
+  display: flex;
+  justify-content: space-between;
+  align-items:last baseline
+}
+
+.data_reserv {
+  margin: 10px;
+  font-size: larger;
+}
+
+.comment_reserv{
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card_comment {
+  width: 400px;
+  background-color: $secondary;
+
+}
+
+.footer_status {
+ color: $primary;
+ font-weight: bold;
+}
