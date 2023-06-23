@@ -1,12 +1,19 @@
-.magic_search-form {
+.magic-search {
   display: flex;
   align-items: center;
-  border-radius: 20px;
   padding: 5px;
   margin-right: 25px;
-} .btn {
-  color: white;
 }
-.search-input {
-  width: 350px;
+.search-btn {
+  height: 20px;
+  margin-left: -30px;
+}
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.magic-search-input {
+  flex-grow: 1;
+  padding-right: 25px;
 }
