@@ -1,14 +1,5 @@
-<%= simple_form_for (@user)  do |f| %>
-  <div class="containe-user">
-    <div class="text_form">
-      <%= f.input :nickname %>
-    </div>
-    <div>
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-    </div>
+<div class="profile-edit">
+  <%= simple_form_for (@user)  do |f| %>
     <div class="text_form">
       <%= f.input :description %>
     </div>
@@ -16,6 +7,5 @@
       <%= f.input :photo, as: :file %>
     </div>
     <%= f.submit class: "btn_form" %>
-  </div>
-
-<% end %>
+  <% end %>
+</div>
