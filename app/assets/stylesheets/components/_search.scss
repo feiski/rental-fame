@@ -11,9 +11,10 @@
 .search-input-container {
   display: flex;
   align-items: center;
-  background-color: white;
 }
 .magic-search-input {
   flex-grow: 1;
   padding-right: 25px;
+  height: 38px;
+  border-radius: 8px;
 }

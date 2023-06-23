@@ -46,7 +46,7 @@
     <% if current_user == @offer.user %>
       <h2>Reservations</h2>
       <% if @offer.reservations.size == 0 %>
-       <p>There is no reservation for this offer yet.</p>
+        <p>There is no reservation for this offer yet.</p>
       <% else %>
         <div class="resa-wrap">
         <% @offer.reservations.each do |reservation| %>
