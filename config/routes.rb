@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get "profil", to: "pages#profil"
+  get "profil/:id", to: "pages#profilshow", as: :show_profil
 
   resources :users, only: %i[edit update]
 end
