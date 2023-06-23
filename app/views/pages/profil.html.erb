@@ -14,11 +14,11 @@
   <div class= "card-profil">
       Description:
       <%if current_user.description == nil%>
-        <%# <%= simple_form_for current_user do |f|
+        <%# <%= simple_form_for user do |f|
           <%= f.input :description
         <% end %>
       <%else%>
-        <%current_user.descrition%>
+        <%current_user.description%>
       <%end%>
   </div>
 </div>
