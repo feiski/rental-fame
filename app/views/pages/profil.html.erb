@@ -11,12 +11,11 @@
     <p><%= @user.email %></p>
     <p><%= @user.description %></p>
     <p class="history">
-      <% if @user == current_user %>
-        You have
-        <% else %>
-          <%= @user.nickname %> has
-        <% end %>
-        created <%= @offers_count %> offers and reserved <%= @reservations_count %> offers.
+      <% @offers_count > 1 ? offers = "offers" : offers = "offer" %>
+      <% @reservations_count > 1 ? resas = "reservations" : resas = "reservation" %>
+      <% @user == current_user ? have = "have" : have = "has" %>
+      <%= @user == current_user ? "You #{ have }" : "#{ @user.nickname } #{ have }"%>
+        created <%= @offers_count %> <%= offers %> and <%= have %> <%= @reservations_count %> <%= resas %>.
       </p>
   </div>
   <% if @user == current_user %>
