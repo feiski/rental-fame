@@ -11,14 +11,23 @@ text-align: center;
 
 .typed-container {
   margin-top: 50px;
-} .sentences {
+}
+
+.banner-ttl {
+  font-family: "Inter", sans-serif;
+  color: $secondary;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.sentences {
   color: $primary;
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .browse-offers {
   margin-top: 25px;
-  font-size: 35px;
+  font-size: 1.5em;
 }
 
 .offers-index {

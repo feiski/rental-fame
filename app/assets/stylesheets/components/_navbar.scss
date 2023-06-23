@@ -50,13 +50,13 @@ align-items: center;
 }
 .logout-btn {
   padding: 4px 15px;
-  background-color: rgb(56, 53, 53);
+  background-color: rgb(125, 125, 125);
   border-radius: 5px;
   font-size: 14px;
-  color: grey;
+  color: white;
   text-decoration: none;
   &:hover {
-  background-color: lightgrey;
+  background-color: rgb(145, 145, 145);
   color: white;
   }
 } .fa-xmark {
