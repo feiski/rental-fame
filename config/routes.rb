@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get "profil", to: "pages#profil"
+
+  resources :users, only: %i[edit update]
 end
