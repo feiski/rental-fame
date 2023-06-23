@@ -50,7 +50,7 @@ class OffersController < ApplicationController
 
   def destroy
     @offer.destroy
-    redirect_to root_path
+    redirect_to offers_path(show_owned: true)
   end
 
   private

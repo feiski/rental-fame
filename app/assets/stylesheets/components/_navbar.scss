@@ -18,6 +18,7 @@
   transform: scale(3);
   margin-right: 80px;
 } .avatar {
+  object-fit: cover;
   height: 60px;
   width: 60px;
   border-radius: 50%;
