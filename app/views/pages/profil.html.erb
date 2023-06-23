@@ -10,7 +10,16 @@
     <h1><%= @user.nickname %></h1>
     <p><%= @user.email %></p>
     <p><%= @user.description %></p>
-    <p class="history">You have created <%= @offers_count %> offers and reserved <%= @reservations_count %> offers.</p>
+    <p class="history">
+      <% if @user == current_user %>
+        You have
+        <% else %>
+          <%= @user.nickname %> has
+        <% end %>
+        created <%= @offers_count %> offers and reserved <%= @reservations_count %> offers.
+      </p>
   </div>
-  <%= link_to "Edit profile", edit_user_path(current_user), class: "edit" %>
+  <% if @user == current_user %>
+    <%= link_to "Edit profile", edit_user_path(current_user), class: "edit" %>
+    <% end %>
 </div>
