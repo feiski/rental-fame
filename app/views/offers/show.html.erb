@@ -51,7 +51,7 @@
         <div class="resa-wrap">
         <% @offer.reservations.each do |reservation| %>
             <div class="resa">
-              <h1>John</h1>
+              <h1><%= current_user.nickname.capitalize %></h1>
               <div class="comment">
                 <span class="quote">“</span>
                 <p><%= reservation.comment %></p>
