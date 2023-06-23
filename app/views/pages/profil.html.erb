@@ -1,30 +1,16 @@
-<div class= "container-profil">
-  <h1>Mon profil</h1>
-  <div class= "card-profil">
-    <div class= "card-style_profil">
-    <div class = "photo-profil">
-      <% if current_user.photo.key.present? %>
-      <%= cl_image_tag current_user.photo.key, class: "photo" %>
+<div class="profile">
+  <div class = "profile-picture">
+    <% if @user.photo.key.present? %>
+      <%= cl_image_tag @user.photo.key, class: "photo" %>
     <% else %>
       <%= image_tag "Star.png", alt: "No Star", class: "photo" %>
     <% end %>
-    </div>
-      <%= current_user.nickname %>
-
-      <ul>
-        <li> Offer's number : 8 </li>
-        <br><br><li> Reservation's number : 15</li>
-        <br><br><li> Avis : 14 </li>
-      </ul>
-    </div>
   </div>
-  <div class= "card-description">
-    <h3> </h3>Description : </h3>
-    <div>
-      <%= current_user.description %>
-    </div>
+  <div class="profile-info">
+    <h1><%= @user.nickname %></h1>
+    <p><%= @user.email %></p>
+    <p><%= @user.description %></p>
+    <p class="history">You have created <%= @offers_count %> offers and reserved <%= @reservations_count %> offers.</p>
   </div>
-  <div class="btn">
-    <%= link_to "edit your profil", edit_user_path(current_user) %>
-  </div>
+  <%= link_to "Edit profile", edit_user_path(current_user), class: "edit" %>
 </div>
