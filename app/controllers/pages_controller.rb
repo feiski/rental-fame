@@ -13,6 +13,8 @@ class PagesController < ApplicationController
 
   def profilshow
     @user = User.find(params[:id])
+    @offers_count = Offer.where(user: @user).count
+    @reservations_count = Reservation.where(user: @user).count
     render :profil
   end
 end
