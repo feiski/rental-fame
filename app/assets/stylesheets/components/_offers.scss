@@ -122,8 +122,10 @@
   text-align: center;
 
   .resa-wrap{
+    padding-top: 15px;
     display: flex;
     justify-content: center;
+    gap: 20px;
   }
   .resa {
     background-color: white;
@@ -131,6 +133,8 @@
     width: 350px;
     padding: 30px;
     text-align: left;
+    flex-grow: 0;
+    height: fit-content;
 
     h1 {
       font-weight: bold;
@@ -143,11 +147,11 @@
       margin-bottom: 5px;
       color: #686868;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding-left: 10px;
 
       p {
-        margin: 0 10px;
+        margin: 10px 8px;
       }
 
       .quote {

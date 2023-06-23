@@ -5,32 +5,33 @@
     <% end %>
 
     <% if user_signed_in? %>
-      <div class="nav-button">
-        <%= link_to "New offer", new_offer_path(@offer), class: "add" %>
-        <%= link_to "My reservations", reservations_path, class: "add" %>
-        <%= link_to "My offers", offers_path(show_owned: true), class: "add" %>
-        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "add" %>
-      </div>
+      <div class="nav-items">
+        <%= link_to new_offer_path(@offer), class: "nav-button new" do %>
+        <i class="fa-solid fa-plus"></i> New offer
+        <% end %>
+        <%= form_with url: offers_path, method: :get, class: "magic_search-form" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control search-input",
+            placeholder: "Find your fame!"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+        <%= link_to "My offers", offers_path(show_owned: true), class: "nav-button off" %>
+        <%= link_to "My reservations", reservations_path, class: "nav-button resa" %>
       <div class="avatar">
         <%= link_to profil_path do %>
           <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar" %>
         <% end %>
       </div>
+        <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "logout-btn" do %>
+        <i class="fa-solid fa-xmark"></i> Logout
+        <% end %>
+      </div>
     <% else %>
-      <div class="nav-button">
-        <%= link_to "Login", new_user_session_path, class: "add" %>
+      <div class="nav-items">
+        <%= link_to "Login", new_user_session_path, class: "nav-button" %>
       </div>
     <% end %>
   </div>
 </div>
-
-
-
-    <%# <div>
-      <form action="/search" method="GET" class="search-form">
-        <div class="input-container">
-          <input type="text" name="query" placeholder="Find an offer" class="search-input">
-          <button type="submit" class="fa-solid fa-magnifying-glass fa-lg"></button>
-        </div>
-      </form>
-    </div> %>
