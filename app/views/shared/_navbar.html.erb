@@ -1,6 +1,6 @@
 <div class="navbar-container">
   <div class="navbar-display">
-    <%= link_to root_path do %>
+    <%= link_to offers_path do %>
       <%= image_tag image_path("logo.png"), class: "logo" %>
     <% end %>
 
@@ -9,14 +9,16 @@
         <%= link_to new_offer_path(@offer), class: "nav-button new" do %>
         <i class="fa-solid fa-plus"></i> New offer
         <% end %>
-        <%= form_with url: offers_path, method: :get, class: "magic_search-form" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control search-input",
-            placeholder: "Find your fame!"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
+        <form action="<%= offers_path %>" method="get", class="magic-search">
+          <div class="search-input-container">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "magic-search-input",
+              placeholder: "Find your fame!"
+            %>
+            <%= image_submit_tag "magnifying_glass.png", alt: "magnifying glass", class: "search-btn" %>
+          </div>
+        </form>
         <%= link_to "My offers", offers_path(show_owned: true), class: "nav-button off" %>
         <%= link_to "My reservations", reservations_path, class: "nav-button resa" %>
       <div class="avatar">
