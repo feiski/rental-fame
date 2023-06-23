@@ -1,0 +1,9 @@
+<%= simple_form_for (@user)  do |f| %>
+  <div class="text_form">
+    <%= f.input :description %>
+  </div>
+  <div class="text_form btn_photo">
+    <%= f.input :photo, as: :file %>
+  </div>
+  <%= f.submit class: "btn_form" %>
+<% end %>
