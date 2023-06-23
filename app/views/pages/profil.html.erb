@@ -1,1 +1,25 @@
-<h1>Mon profil</h1>
+<div class= "container-profil">
+  <h1>Mon profil</h1>
+  <div class= "card-profil">
+    <div class= "card-style_profil">
+      <p> coucou </p>
+      <%= current_user.nickname %>
+      
+      <ul>
+        <li> Offer's number : 8 </li>
+        <br><br><li> Reservation's number : 15</li>
+        <br><br><li> Avis : 14 </li>
+      </ul>
+    </div>
+  </div>
+  <div class= "card-profil">
+      Description:
+      <%if current_user.description == nil%>
+        <%# <%= simple_form_for user do |f|
+          <%= f.input :description
+        <% end %>
+      <%else%>
+        <%current_user.description%>
+      <%end%>
+  </div>
+</div>
