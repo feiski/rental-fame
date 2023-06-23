@@ -1,14 +1,17 @@
 <div class="offers-index">
-  <% @offers.each do |offer| %>
-    <%= link_to offer_path(offer.id), class: "offer-index" do %>
-      <% if offer.photo.key.present? %>
-        <%= cl_image_tag offer.photo.key, class: "photo-index" %>
-      <% else %>
-        <%= image_tag "Star.png", alt: "No Star", class: "photo-index" %>
+  <% if @offers.present? %>
+    <% @offers.each do |offer| %>
+      <%= link_to offer_path(offer.id), class: "offer-index" do %>
+        <% if offer.photo.key.present? %>
+          <%= cl_image_tag offer.photo.key, class: "photo-index" %>
+        <% else %>
+          <%= image_tag "Star.png", alt: "No Star", class: "photo-index" %>
+        <% end %>
+        <h1><%= offer.title %></h1>
+        <div class="offer-price-index">$<%= offer.price %></div>
       <% end %>
-      <h1><%= offer.title %></h1>
-      <div class="offer-price-index">$<%= offer.price %></div>
     <% end %>
+  <% else %>
+    <p class="response">You have not yet created offers</p>
   <% end %>
-</div>
 </div>
