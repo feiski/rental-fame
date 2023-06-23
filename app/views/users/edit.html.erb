@@ -1,5 +1,11 @@
 <div class="profile-edit">
   <%= simple_form_for (@user)  do |f| %>
+    <div>
+      <div class="text_form"><%= f.input :nickname %></div>
+    </div>
+    <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+    </div>
     <div class="text_form">
       <%= f.input :description %>
     </div>
