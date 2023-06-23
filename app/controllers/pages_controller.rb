@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def profil
-    @user = current_user.nickname
+    @users = User.all
   end
 end
