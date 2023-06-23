@@ -71,7 +71,7 @@
       <% end %>
     <% else %>
       <% if @reserved %>
-        <p>You have already made a reservation for this offer!</p>
+        <strong><p>You have already made a reservation for this offer!</p></strong>
       <% else %>
         <div>
           <%= render "shared/resaform", reservation: @reservation %>

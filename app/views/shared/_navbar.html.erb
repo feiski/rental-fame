@@ -23,7 +23,7 @@
         <%= link_to "My reservations", reservations_path, class: "nav-button resa" %>
       <div class="avatar">
         <%= link_to profil_path do %>
-          <%= image_tag "https://loremflickr.com/500/500/faces", class: "avatar" %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar" %>
         <% end %>
       </div>
         <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "logout-btn" do %>
