@@ -3,8 +3,10 @@ text-align: center;
 }
 
 .banner img {
-  height: 350px;
-  margin-bottom: 25px;
+  width: 700px;
+  margin: 25px 0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .typed-container {
